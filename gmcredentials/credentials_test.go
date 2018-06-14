@@ -1,3 +1,4 @@
+/* credentials test */
 package gmcredentials
 
 import (
