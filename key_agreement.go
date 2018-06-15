@@ -139,7 +139,7 @@ func hashForServerKeyExchange(sigAndHash signatureAndHash, version uint16, slice
 		}
 		digest := h.Sum(nil)
 		return digest, hashFunc, nil
-	}
+	}  
 	if sigAndHash.signature == signatureECDSA {
 		return sha1Hash(slices), crypto.SHA1, nil
 	}
