@@ -93,6 +93,7 @@ type tlsCreds struct {
 	config *gmtls.Config
 }
 
+// server info
 func (c tlsCreds) Info() credentials.ProtocolInfo {
 	return credentials.ProtocolInfo{
 		SecurityProtocol: "tls",
