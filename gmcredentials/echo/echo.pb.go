@@ -92,6 +92,10 @@ func NewEchoClient(cc *grpc.ClientConn) EchoClient {
 	return &echoClient{cc}
 }
 
+type echoClient_NEW struct {
+	cc *grpc.ClientConn
+}
+
 func (c *echoClient) Echo(ctx context.Context, in *EchoRequest, opts ...grpc.CallOption) (*EchoResponse, error) {
 	out := new(EchoResponse)
 	err := grpc.Invoke(ctx, "/echo.Echo/Echo", in, out, c.cc, opts...)
